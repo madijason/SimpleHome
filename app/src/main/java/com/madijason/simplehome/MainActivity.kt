@@ -293,7 +293,7 @@ fun AppIcon(
                     .padding(6.dp)
             )
             // Pin badge: springs into existence, fades out cleanly
-            AnimatedVisibility(
+            androidx.compose.animation.AnimatedVisibility(
                 visible  = isPinned,
                 modifier = Modifier
                     .align(Alignment.TopEnd)
