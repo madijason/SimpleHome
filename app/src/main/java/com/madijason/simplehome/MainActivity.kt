@@ -10,6 +10,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -27,6 +28,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.core.graphics.drawable.toBitmap
 
 data class AppInfo(
@@ -183,6 +185,7 @@ fun AppGrid(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AppIcon(
     app: AppInfo,
@@ -288,6 +291,7 @@ fun PinnedBar(
     }
 }
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun PinnedIcon(
     app: AppInfo,
